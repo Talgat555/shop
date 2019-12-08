@@ -1,38 +1,30 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import {setBooks} from "./actions/books-actions";
+import Container from "semantic-ui-react/dist/es/elements/Container/Container";
+import MenuContainer from "./components/MenuApp/MenuContainer";
+import CardsContainer from "./components/CardsApp/CardsContainer";
+import FilterContainer from "./components/Filter/filterContainer";
 
 
 
 
-const App =(props) => {
-
-
-
-
-    const setNewBooks =()=>{
-
-        const list = {
-            id:1,
-            title: 'Learning  React'
-        };
-
-        props.setBooks(list)
-    };
+const App = () => {
 
   return (
-    <div>
-        <button onClick={setNewBooks}>Set New Book</button>
-    </div>
+      <div>
+          <Container>
+              <div className='AppMenu'>
+                  <MenuContainer />
+              </div>
+              <div>
+                  <FilterContainer />
+              </div>
+              <div className='AppBody'>
+                  <CardsContainer />
+              </div>
+          </Container>
+      </div>
   );
 };
 
-const mapStateToProps = state =>({
-    ...state
-});
 
-const mapDispatchToProps = dispatch =>({
-    setBooks: books => dispatch(setBooks(books))
-});
-
-export default connect (mapStateToProps, mapDispatchToProps)(App);
+export default App;
