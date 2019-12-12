@@ -31,7 +31,7 @@ const CardsContainer = React.memo (({setBooks, books, isReady, cardsItems, addBo
             ));
 
     return (
-        <Card.Group itemsPerRow={5}>
+        <Card.Group itemsPerRow={6}>
             {list}
         </Card.Group>
     );

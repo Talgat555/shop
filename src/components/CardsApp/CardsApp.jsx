@@ -17,7 +17,7 @@ const CardsApp = ({book, addBook, cardsItems }) => {
 
     return (
         <Card>
-            <Image src={image}/>
+            <Image  src={image}/>
             <Card.Content>
                 <Card.Header>{title}</Card.Header>
                 <Card.Meta>

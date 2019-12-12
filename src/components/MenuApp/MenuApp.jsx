@@ -42,7 +42,7 @@ const MenuApp =(props)=> {
                     content={
                         cartBooks.length
                             ? cartBooks.map(
-                                cartBook => <CartPopover removeBook={removeBook}
+                                cartBook => <CartPopover key={cartBook.title+cartBook.id} removeBook={removeBook}
                                 cartBook={cartBook}
                                 />)
                             : 'Добавте книги'

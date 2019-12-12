@@ -10,19 +10,21 @@ import FilterContainer from "./components/Filter/filterContainer";
 const App = () => {
 
   return (
-      <div>
-          <Container>
-              <div className='AppMenu'>
+      <Container>
+          <div className='AppMenu'>
+              <div className='AppMenuMenu'>
                   <MenuContainer />
               </div>
-              <div>
+              <div className='AppMenuFilter'>
                   <FilterContainer />
               </div>
-              <div className='AppBody'>
+          </div>
+          <div className='AppBody'>
+              <div>
                   <CardsContainer />
-              </div>
-          </Container>
-      </div>
+                </div>
+          </div>
+      </Container>
   );
 };
 
